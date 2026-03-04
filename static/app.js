@@ -142,7 +142,7 @@ function downloadSetupScript(ideaText) {
   const a = document.createElement('a');
   const projectName = slugify(ideaText) || 'my-app';
   a.href = url;
-  a.download = `setup-${projectName}.sh`;
+  a.download = `setup-${projectName}.command`; // .command = auto-opens Terminal on Mac double-click
   a.click();
   URL.revokeObjectURL(url);
 }
@@ -190,7 +190,7 @@ async function loadIdeas() {
       btn.addEventListener('click', () => {
         const text = decodeURIComponent(btn.dataset.text);
         downloadSetupScript(text);
-        showToast('setup.sh downloaded — run: bash setup.sh');
+        showToast('Downloaded! Right-click → Open to run (first time only)');
       });
     });
 

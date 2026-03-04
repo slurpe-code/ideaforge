@@ -101,12 +101,14 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .idea-text {
   flex: 1;
   font-size: 0.95rem;
   line-height: 1.4;
+  min-width: 160px;
 }
 
 .idea-meta {
@@ -115,18 +117,38 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
   white-space: nowrap;
 }
 
+.card-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 .expand-btn {
-  background: transparent;
-  border: 1px solid var(--accent);
+  background: var(--accent);
+  border: none;
   border-radius: var(--radius);
-  color: var(--accent);
+  color: #fff;
   font-size: 0.8rem;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 7px 13px;
   white-space: nowrap;
 }
 
-.expand-btn:hover {
-  background: var(--accent);
-  color: #fff;
+.expand-btn:hover { background: var(--accent-hover); }
+
+.setup-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 7px 13px;
+  white-space: nowrap;
+}
+
+.setup-btn:hover {
+  border-color: var(--success);
+  color: var(--success);
 }

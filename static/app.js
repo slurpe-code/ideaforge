@@ -144,7 +144,7 @@ function downloadSetupScript(ideaText) {
   const a = document.createElement('a');
   const projectName = slugify(ideaText) || 'my-app';
   a.href = url;
-  a.download = `setup-${projectName}.command`; // .command = auto-opens Terminal on Mac double-click
+  a.download = `setup-${projectName}.sh`;
   a.click();
   URL.revokeObjectURL(url);
 }
@@ -191,8 +191,10 @@ async function loadIdeas() {
     document.querySelectorAll('.setup-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const text = decodeURIComponent(btn.dataset.text);
+        const name = slugify(text) || 'my-app';
         downloadSetupScript(text);
-        showToast('Downloaded! Right-click → Open to run (first time only)');
+        navigator.clipboard.writeText(`bash ~/Downloads/setup-${name}.sh`);
+        showToast('Downloaded + command copied — just paste in Terminal');
       });
     });
 

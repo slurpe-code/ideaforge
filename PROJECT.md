@@ -84,18 +84,18 @@ ideaforge/
 |------|-------------|-------|--------|
 | 6.1 | buildSetupScript() in app.js | a. slugify idea to project name b. generate full bash script c. venv + pip + gh repo create + git push | ✅ |
 | 6.2 | Download button on each card | a. "↓ setup.sh" button b. triggers file download c. filename = setup-[project-name].sh | ✅ |
-| 6.3 | Style + test | a. button styled in CSS b. reload app c. save idea + verify both buttons appear + download works | ⬜ |
-| 6.4 | Commit Phase 6 | a. git add . b. commit "Phase 6 - Auto Setup Script Generator ✓" c. push | ⬜ |
+| 6.3 | Style + test | a. button styled in CSS b. reload app c. save idea + verify both buttons appear + download works | ✅ |
+| 6.4 | Commit Phase 6 | a. git add . b. commit "Phase 6 - Auto Setup Script Generator ✓" c. push | ✅ |
 
 _Status legend: ⬜ pending | 🔄 in-progress | ✅ done | ⚠️ blocked_
 
 ---
 
 ## Current State
-- **Last completed:** Phase 6, Step 6.2 — download button + script generator built
-- **What works:** App runs, ideas save, Expand in Cowork copies prompt, ↓ setup.sh downloads script
-- **Next action:** Phase 6, Step 6.3 — reload app, save a test idea, verify both buttons work + setup.sh downloads correctly
-- **GitHub last commit:** "Phase 0 - Auto scaffold ✓"
+- **Last completed:** Phase 6, Step 6.4 — all phases complete ✅
+- **What works:** Full app — save ideas, Expand in Cowork copies prompt, ↓ setup.sh downloads one-command project launcher
+- **Next action:** None — app is complete. Add new features as needed.
+- **GitHub last commit:** "Phase 6 - Auto Setup Script Generator ✓"
 
 ---
 

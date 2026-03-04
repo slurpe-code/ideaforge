@@ -120,7 +120,7 @@ git commit -m "Phase 0 - Auto scaffold ✓" --quiet
 
 # 7. Create GitHub repo + push
 echo "→ Creating GitHub repo under $GITHUB_USER..."
-gh repo create "$GITHUB_USER/$PROJECT" --public --source=. --remote=origin --push --quiet
+gh repo create "$GITHUB_USER/$PROJECT" --public --source=. --remote=origin --push
 
 echo ""
 echo "✅ Done! Your project is ready."
